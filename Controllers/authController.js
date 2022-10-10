@@ -3,6 +3,7 @@ const User = require ('../Models/User');
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator');
+const jwt = require('jsonwebtoken')
 
 const authController = {
     
@@ -55,12 +56,12 @@ const authController = {
         
         const user = await User.findOne({ email: email })
         if (!user) {
-            return res.status(404).json({msg: 'Usuário não encontrado!'});
-        }console.log(user)
+            return res.status(404).json({msg: 'Credenciais incorretas!'});
+        }
         
         const checkPassword =  bcrypt.compareSync(password, user.password)  //não esta passando
         if (!checkPassword) {
-            return res.status(422).json({msg: 'senha inválida!'})
+            return res.status(422).json({msg: 'Credenciais incorretas!!'})
         }
         try{
             const secret = process.env.SECRET
@@ -89,6 +90,7 @@ const authController = {
 
     viewOneUser: async (req, res) => {
          const { id } = req.params;
+         if(req.user.id !== id) return res.status(401).json ({msg: ' parametros não correspodem com o usuario logado'})
          
     try {
         const user = await User.findOne({ _id: id });
