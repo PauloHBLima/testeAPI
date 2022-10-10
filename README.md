@@ -4,6 +4,14 @@
 ## Objetivo
 Desenvolver uma API para manipulação de dados de navegação em sites genericos.
 
+## Tech Stack
+
+Back-end: Node Js, express, javascript, Mongoose.
+
+Design pattern: MVC
+
+Banco de dados: Não Relacional, MongoDB.
+
 ## Como utilizar
 - Faça o clone para sua máquina
 ```bash
@@ -43,6 +51,33 @@ mongoose.connect(link gerado para conectar ao banco)
 ```
 npm start
 
-
 ## Documentação da API via Postman
 https://documenter.getpostman.com/view/22468594/2s83ziN4BJ
+
+## Tecnologias utilizadas
+### Desenvolvimento 
+```json
+"devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+```
+### Produção
+```json
+"dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+```
+
+## Muito Obrigado!
+
+
