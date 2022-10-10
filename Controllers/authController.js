@@ -20,9 +20,6 @@ const authController = {
             if (await User.findOne ({email}))
             return res.status(400).send ({error: 'Por favor, utilize outro email!'});
 
-            //const salt = await bcrypt.genSalt(12)
-           // const passwordHash = await bcrypt.hash(password, salt)
-
             if(!password) {
                 return res.status(422).json({msg: 'A senha é obrigatória!'})
             }

@@ -4,7 +4,10 @@ const app = express();
 const userRoutes = require("./routes/userRoutes")
 const bodyParser = require('body-parser')
 const jwt = require('jsonwebtoken')
+var cors = require('cors')
 //require('dotenv').config()
+
+
 
 
 app.use(express.json());
@@ -12,6 +15,7 @@ app.use(express.urlencoded ({
     extended: true,
 }))
 
+app.use(cors())
 
 
 app.use('/navigation', userRoutes);
