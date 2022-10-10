@@ -39,9 +39,10 @@ mongoose.connect(link gerado para conectar ao banco)
 - Faça a inserção de valores padrão em seu banco de dados na```Model```
 ```bash
 
-- tabela do banco de dados em ```Collections```
-```bash
-npm start
+- tabela do banco de dados em Collections
 ```
+npm start
+
+
 ## Documentação da API via Postman
 https://documenter.getpostman.com/view/22468594/2s83ziN4BJ
