@@ -52,7 +52,7 @@ mongoose.connect(link gerado para conectar ao banco)
 npm start
 
 ## Documentação da API via Postman
-https://documenter.getpostman.com/view/22468594/2s83ziN4BJ#f3f21588-a155-4f9f-bd60-321c51a32d91
+https://documenter.getpostman.com/view/22468594/2s83ziN4BJ
 
 ## Tecnologias utilizadas
 ### Desenvolvimento 
